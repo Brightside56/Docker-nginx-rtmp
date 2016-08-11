@@ -14,7 +14,7 @@ cd ..
 
 DID=`docker create ${DOCKER_BUILD_IMAGE}`
 
-docker cp ${DID}:/tmp/nginx.tar.gz ./
+docker cp ${DID}:/opt/nginx.tar.gz ./
 
 docker rm ${DID}
 docker rmi ${DOCKER_BUILD_IMAGE}
