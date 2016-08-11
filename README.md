@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Brightside56/Docker-nginx-rtmp.svg?branch=master)](https://travis-ci.org/Brightside56/Docker-nginx-rtmp)
+
 # Docker-nginx-rtmp
 Docker image for an RTMP/HLS server running on nginx
 
