@@ -36,9 +36,9 @@ RUN	apk update		&&	\
 
 RUN	cd /tmp/									&&	\
 	wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz			&&	\
-	git clone https://github.com/arut/nginx-rtmp-module.git && \
-	cd nginx-rtmp-module && \
-	git checkout v{RTMP_VERSION} && \
+	git clone https://github.com/arut/nginx-rtmp-module.git 		&&  \
+	cd nginx-rtmp-module		&&  \
+	git checkout v{RTMP_VERSION}		&&  \
 	cd ..
 
 RUN	cd /tmp										&&	\
