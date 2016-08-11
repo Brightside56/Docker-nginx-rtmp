@@ -63,8 +63,8 @@ RUN	echo "rtmp {" >> /opt/nginx/conf/nginx.conf					&&	\
 	echo "	}" >> /opt/nginx/conf/nginx.conf					&&	\
 	echo "}" >> /opt/nginx/conf/nginx.conf
 
-#RUN	cd /opt/ 	&&	\
-#	tar cvzf /opt/nginx.tar.gz nginx
+# RUN	cd /opt/ 	&&	\
+# 	tar cvzf /opt/nginx.tar.gz nginx
 
 EXPOSE 1935
 EXPOSE 8080
