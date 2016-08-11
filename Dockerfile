@@ -2,7 +2,6 @@ FROM alpine:latest
 MAINTAINER Oleg Gumbar <brightside@fonline-status.ru>
 
 ENV NGINX_VERSION 1.11.3
-ENV RTMP_VERSION 1.1.9
 
 RUN	apk update		&&	\
 	apk add				\
@@ -38,7 +37,7 @@ RUN	cd /tmp/
 RUN	wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz
 RUN	git clone https://github.com/arut/nginx-rtmp-module.git
 RUN	cd nginx-rtmp-module
-RUN	git checkout v${RTMP_VERSION}
+RUN	git checkout v1.1.9
 RUN	cd ..
 
 RUN	cd /tmp										&&	\
