@@ -1,7 +1,7 @@
 FROM alpine:latest
-MAINTAINER Jason Rivers <docker@jasonrivers.co.uk>
+MAINTAINER Oleg Gumbar <brightside@fonline-status.ru>
 
-ENV NGINX_VERSION 1.9.15
+ENV NGINX_VERSION 1.11.3
 
 RUN	apk update		&&	\
 	apk add				\
