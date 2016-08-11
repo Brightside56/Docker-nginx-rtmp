@@ -1,41 +1,35 @@
 [![Build Status](https://travis-ci.org/Brightside56/Docker-nginx-rtmp.svg?branch=master)](https://travis-ci.org/Brightside56/Docker-nginx-rtmp)
 
 # Docker-nginx-rtmp
-Docker image for an RTMP/HLS server running on nginx
+Docker-имейдж который является точкой публикации и в случае необходимости параллельно сервит RTMP/HLS на основе nginx
 
-NGINX Version 1.9.15
-nginx-rtmp-module Version 1.1.7
+Версия NGINX 1.9.15
+Версия nginx-rtmp-module 1.1.7
 
-### Configurations
-This image exposes port 1935 for RTMP Steams and has 2 channels open "live" and "testing".
+### Настройка
+Данный имейдж использует порт 1935 для работы RTMP-потоков и имеет 2 таковых - "live" и "testing". Live так же доступен по протоколу HLS на порту 8080.
 
-Live is also accessable via HLS on port 8080
+Для просмотра статистики используйте http://<адрес сервера>:8080/stat
 
-It also exposes 8080 so you can access http://<your server ip>:8080/stat to see the streaming statistics.
+Конфигурационный файл nginx находится по адресу /opt/nginx/conf/
 
-The configuration file is in /opt/nginx/conf/
+### Запуск
 
-### Running
-
-To run the container and bind the port 1935 to the host machine; run the following:
+Для того, чтобы запустить контейнер и забиндить для него соответствующие порты хоста, запустите следующую команду:
 ```
-docker run -p 1935:1935 -p 8080:8080 jasonrivers/nginx-rtmp
+docker run -p 1935:1935 -p 8080:8080 brightside/nginx-rtmp
 ```
 
-### OBS Configuration
-Under broadcast settigns, set the follwing parameters:
+### Пример  настроек для OBS
+Учстановите следующие параметры под настройками трансляции:
 ```
 Streaming Service: Custom
-Server: rtmp://<your server ip>/live
+Server: rtmp://<адрес сервера>/live
 Play Path/Stream Key: mystream
 ```
 
-### Watching the steam
+### Просмотр потоков по rtmp-ссылке
 
-In your favorite RTMP video player connect to the stream using the URL:
+Откройте url ниже, используя нужный плеер, чтобы посмотреть поток:
 rtmp://&lt;your server ip&gt;/live/mystream
 http://&lt;your server ip&gt;/hls/mystream.m3u8
-
-### Tested players
- * VLC
- * omxplayer (Raspberry Pi)
