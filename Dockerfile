@@ -9,7 +9,7 @@ RUN	apk update		&&	\
 		pcre
 
 
-ADD	nginx.tar.gz /opt/
+#ADD	nginx.tar.gz /opt/
 ADD	nginx.conf /opt/nginx/conf/nginx.conf
 
 EXPOSE 1935
