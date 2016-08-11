@@ -4,7 +4,7 @@ set -e
 DOCKER_RUN_IMAGE=nginx-rtmp
 DOCKER_BUILD_IMAGE=nginx-build
 
-rm -f nginx.tar.gz
+#rm -f nginx.tar.gz
 
 cd build
 
