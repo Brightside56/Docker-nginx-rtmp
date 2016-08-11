@@ -32,13 +32,12 @@ RUN	apk update		&&	\
 		openssl-dev		\
 		make
 
-
-RUN	cd /tmp/
-RUN	wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz
-RUN	git clone https://github.com/arut/nginx-rtmp-module.git
-RUN	cd nginx-rtmp-module
-RUN	git checkout v1.1.9
-RUN	cd ..
+RUN	cd /tmp/		&&	\
+	wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz		&&	\
+	git clone https://github.com/arut/nginx-rtmp-module.git		&&	\
+	cd nginx-rtmp-module		&&	\
+	git checkout v1.1.9		&&	\
+	cd ..
 
 RUN	cd /tmp										&&	\
 	tar xzf nginx-${NGINX_VERSION}.tar.gz						&&	\
