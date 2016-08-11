@@ -32,4 +32,5 @@ Play Path/Stream Key: mystream
 
 Откройте url ниже, используя нужный плеер, чтобы посмотреть поток:
 rtmp://&lt;your server ip&gt;/live/mystream
+
 http://&lt;your server ip&gt;/hls/mystream.m3u8
